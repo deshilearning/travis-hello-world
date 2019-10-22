@@ -9,7 +9,8 @@ addons:
   sonarcloud:
     organization: "deshilearning"
     token:
-      secure: d6b7720e60a8462e2a8265ce52ccd75a7e232dd8
+      secure: 696485ac36248afb98b2a70d8b038ca049045be0
 script:
   # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
-  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=deshi
+  
