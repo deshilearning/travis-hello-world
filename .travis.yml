@@ -20,4 +20,4 @@ deploy:
         branch: master
     provider: heroku
     api-key: 
-        secure: 366c896f-7908-48a2-8be5-1e4495d40d3c
+        secure: 62474f70-f919-4c29-95db-3ab25f55f4a6
