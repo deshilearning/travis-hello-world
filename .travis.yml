@@ -1,0 +1,23 @@
+language: java
+# whitelist
+branches:
+  only:
+    - A
+    - master
+    - dev
+addons:
+  sonarcloud:
+    organization: "deshilearning"
+    token:
+      secure: 696485ac36248afb98b2a70d8b038ca049045be0
+script:
+  # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=deshi
+  
+deploy:
+    app: desh-travis-app
+    on:
+        branch: dev
+    provider: heroku
+    api-key: 
+        secure: 366c896f-7908-48a2-8be5-1e4495d40d3c
