@@ -17,7 +17,7 @@ script:
 deploy:
     app: desh-travis-app
     on:
-        branch: dev
+        branch:master
     provider: heroku
     api-key: 
         secure: 366c896f-7908-48a2-8be5-1e4495d40d3c
