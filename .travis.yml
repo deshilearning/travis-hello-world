@@ -15,9 +15,9 @@ script:
   - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=deshi
   
 deploy:
- provider: heroku
- api-key: 
-  secure: 366c896f-7908-48a2-8be5-1e4495d40d3c
-  app: desh-travis-app
-on:
-    branch: dev
+    app: desh-travis-app
+    on:
+        branch: dev
+    provider: heroku
+    api-key: 
+        secure: 366c896f-7908-48a2-8be5-1e4495d40d3c
